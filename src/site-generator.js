@@ -23,7 +23,7 @@ const assembleTeam = (team) => {
             <ul class="engineerList">
             <li class="engineerListItem">ID: ${engineer.id}</li>
             <li class="engineerListItem">Email: <span id="email"><a href="mailto:${engineer.email}">${engineer.email}</a></span></li>
-            <li class = "engineerListItem">GitHub: ${engineer.gitHub}</li>
+            <a href="https://github.com/${engineer.github}" target="_blank"><li class="engineerListItem">GitHub: ${engineer.github}</li></a>
             </ul>
         </div>
         `;
