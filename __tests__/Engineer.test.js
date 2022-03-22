@@ -2,7 +2,7 @@ const Engineer = require('../lib/Engineer');
 
 describe('Engineer', () => {
     describe('init', () => {
-        it('should require a GitHub username', () => {
+        it('should require a valid GitHub username', () => {
             const engineer = new Engineer('Bruce', 2, 'b@mail.com', 'h4x04_Hulk');
 
             expect('github' in engineer).toBe(true);

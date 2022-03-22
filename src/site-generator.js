@@ -47,13 +47,13 @@ const assembleTeam = (team) => {
     };
 
     for (let i = 0; i < team.length; i++) {
-        if (team[i].getPosition() === "Manager") {
+        if (team[i].role === "Manager") {
             createManager(team[i]);
         };
-        if (team[i].getPosition() === "Engineer") {
+        if (team[i].role === "Engineer") {
             createEngineer(team[i]);
         };
-        if (team[i].getPosition() === "Intern") {
+        if (team[i].role === "Intern") {
             createIntern(team[i]);
         };
     }
