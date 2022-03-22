@@ -4,6 +4,7 @@ const jest = require("jest");
 const Manager = require('./lib/Manager');
 const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
+const siteGenerator = require('./src/site-generator');
 const myTeam = [];
 
 const managerPrompt = () => {
@@ -45,10 +46,10 @@ const promptMain = () => {
                 type: 'list',
                 message: 'What would you like to do next?',
                 name: 'addOrFinish',
-                choices: ['Add an Engineer','Add an Intern','Finish Building My Team']
+                choices: ['Add an Engineer', 'Add an Intern', 'Finish Building My Team']
             }])
         .then(userSelection => {
-            switch (userSelection.menu) {
+            switch (userSelection.addOrFinish) {
                 case 'Add an Engineer':
                     engineerPrompt();
                     break;
@@ -125,7 +126,8 @@ const internPrompt = () => {
 };
 
 const assembleTeam = () => {
-
+    console.log(myTeam);
+    fs.writeFile('page.html', siteGenerator(myTeam), "utf-8");
 };
 
 managerPrompt();
