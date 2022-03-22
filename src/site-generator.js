@@ -9,7 +9,7 @@ const assembleTeam = (team) => {
             <ul class="managerList">
             <li class="managerListItem">ID: ${manager.id}</li>
             <li class="managerListItem">Email: <span id="email"><a href="mailto:${manager.email}">${manager.email}</a></span></li>
-            <li class = "managerListItem">Office Number: ${manager.managerOffice}</li>
+            <li class = "managerListItem">Office Number: ${manager.officeNumber}</li>
             </ul>
         </div>
         `;
