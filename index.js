@@ -4,7 +4,7 @@ const jest = require("jest");
 const Manager = require('./lib/Manager');
 const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
-const siteGenerator = require('./src/site-generator');
+const siteGenerator = require('./src/site-generator.js');
 const myTeam = [];
 
 const managerPrompt = () => {
@@ -34,7 +34,6 @@ const managerPrompt = () => {
         .then(response => {
             const manager = new Manager(response.managerName, response.managerID, response.managerEmail, response.managerOffice);
             myTeam.push(manager);
-            console.log(manager);
             promptMain();
         })
 };
@@ -89,7 +88,6 @@ const engineerPrompt = () => {
         .then(response => {
             const engineer = new Engineer(response.engineerName, response.engineerID, response.engineerEmail, response.gitHub);
             myTeam.push(engineer);
-            console.log(engineer);
             promptMain();
         })
 };
@@ -120,14 +118,14 @@ const internPrompt = () => {
         .then(response => {
             const intern = new Intern(response.internName, response.internID, response.internEmail, response.school);
             myTeam.push(intern);
-            console.log(intern);
             promptMain();
         })
 };
 
-const assembleTeam = () => {
-    console.log(myTeam);
-    fs.writeFile('page.html', siteGenerator(myTeam), "utf-8");
+const assembleTeam = (fileName, data) => {
+    fs.writeFile('./dist/page.html', siteGenerator(myTeam), (err) => {
+        err ? console.error(err) : console.log('success!')
+    });
 };
 
 managerPrompt();

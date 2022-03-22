@@ -27,7 +27,7 @@ const assembleTeam = (team) => {
             </ul>
         </div>
         `;
-        profilePage.push(enginnerCard);
+        profilePage.push(engineerCard);
 
     };
     const createIntern = intern => {
