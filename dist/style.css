@@ -1,0 +1,90 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+:root {
+    --main-color: deepskyblue;
+    --secondary-color: burlywood;
+    --trim-color: mintcream;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: var(--main-color);
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+header {
+    width: 85%;
+    display: flex;
+    justify-content: center;
+    background-color:var(--secondary-color);
+    color:var(--trim-color);
+    border: var(--trim-color) solid 2px;
+    border-radius: 4px;
+    padding: 20px;
+    text-align: center;
+    font-size: x-large;
+    margin-bottom: 10px;
+    
+}
+
+header:hover {
+    color:var(--secondary-color);
+    background-color: var(--trim-color);
+    border: var(--secondary-color) solid 2px;
+}
+
+.managerCard,
+.engineerCard,
+.internCard {
+    display: flex;
+    flex-direction: column;
+    border: 3px var(--secondary-color) solid;
+    width: 300px;
+    height: 150px;
+    align-items: center;
+    border-radius: 5px;
+    margin: 5px;
+    background-color: rgba(135, 207, 235, 0.657);
+}
+
+.managerHeader,
+.engineerHeader,
+.internHeader {
+    margin: 3px;
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    text-align: center;
+    font-size: x-large;
+    text-decoration: underline;
+    color: var(--trim-color);
+    background-color: var(--main-color);
+    border: 1px solid var(--secondary-color);
+    padding: 4px;
+    border-radius: 3px;
+}
+
+.managerList,
+.engineerList,
+.internList {
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 25px;
+}
+
+.managerListItem,
+.engineerListItem,
+.internListItem {
+    padding: 0;
+}

@@ -2,12 +2,12 @@
     box-sizing: border-box;
 };
 
-body {
-
+main {
+background-color:aquamarine;
 };
 
 header {
-
+color: blue;
 };
 
 h1 {
